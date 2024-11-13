@@ -15,8 +15,12 @@
     <div id="app3">
       <!-- my app renders here -->
     </div>
+    <div id="app4">
+      <!-- my app renders here -->
+    </div>
     <script src="react/react.js"></script>
     <script src="react/react-dom.js"></script>
+    <script src="react/babel.js"></script>
     <script>
       ReactDOM.render(
         React.createElement('h1', {id: 'my-headingh1'}, 'React Start 13.11.2024'),
@@ -41,6 +45,13 @@
           ),
         document.getElementById('app3'),
       );
+      </script>
+      <script type="text/babel">
+        ReactDOM.render(
+          <h1 id="h1h1">
+            <span> Hello<em> Wonderful</em></span> world!</h1>,
+            document.getElementById('app4')
+        )
       </script>
   </body>
 </html>

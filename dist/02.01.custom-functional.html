@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Custom React Component</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="00.normal.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- my app renders here -->
+    </div>
+    <div id="app2">
+      <!-- my app renders here -->
+    </div>
+    <div id="app3">
+      <!-- my app renders here -->
+    </div>
+    <script src="react/react.js"></script>
+    <script src="react/react-dom.js"></script>
+    <script src="react/babel.js"></script>
+    <script>
+      const MyComponent = function() {
+        return React.createElement('span', null, 'I am so custom')
+      }
+
+      ReactDOM.render(
+        MyComponent(),
+        document.getElementById('app')
+      )
+    </script>
+    <script type="text/babel">
+        const MyComponentJsx = function() {
+            return <span>Custom span</span>
+        }
+        ReactDOM.render(
+            <MyComponentJsx/>,
+            document.getElementById('app2')
+        )
+    </script>
+    <script>
+        class MyComponentJsxExtends extends React.Component {
+            render() {
+                return React.createElement('span',null,'Super Custom')
+            }
+        }
+        ReactDOM.render(
+            React.createElement(MyComponentJsxExtends),
+            document.getElementById('app3')
+        )
+    </script>
+  </body>
+</html>
