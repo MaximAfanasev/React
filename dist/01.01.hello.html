@@ -9,12 +9,21 @@
     <div id="app">
       <!-- my app renders here -->
     </div>
+    <div id="app2">
+      <!-- my app renders here -->
+    </div>
     <script src="react/react.js"></script>
     <script src="react/react-dom.js"></script>
     <script>
       ReactDOM.render(
-        React.createElement('h1', null, 'React Start 13.11.2024'),
+        React.createElement('h1', {id: 'my-headingh1'}, 'React Start 13.11.2024'),
         document.getElementById('app'),
+      );
+      </script>
+    <script>
+      ReactDOM.render(
+        React.createElement('h2', {id: 'my-headingh2'}, 'React Start 13.11.2024'),
+        document.getElementById('app2'),
       );
       </script>
   </body>
