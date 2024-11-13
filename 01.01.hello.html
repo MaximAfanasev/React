@@ -12,6 +12,9 @@
     <div id="app2">
       <!-- my app renders here -->
     </div>
+    <div id="app3">
+      <!-- my app renders here -->
+    </div>
     <script src="react/react.js"></script>
     <script src="react/react-dom.js"></script>
     <script>
@@ -22,8 +25,21 @@
       </script>
     <script>
       ReactDOM.render(
-        React.createElement('h2', {id: 'my-headingh2'}, 'React Start 13.11.2024'),
+        React.createElement('h2', {id: 'my-headingh2'}, React.createElement('span',{id: 'span'}, 'Wow')),
         document.getElementById('app2'),
+      );
+      </script>
+    <script>
+      ReactDOM.render(
+        React.createElement(
+          'h3', {id:'h3'}, 
+          React.createElement(
+            'span', null,'Hello', 
+            React.createElement(
+              'em',null, 'Wonderful')
+            )
+          ),
+        document.getElementById('app3'),
       );
       </script>
   </body>
