@@ -9,9 +9,24 @@
     <div id="app">
       <!-- my app renders here -->
     </div>
+    <div id="app2">
+      <!-- my app renders here -->
+    </div>
+    <div id="app3">
+      <!-- my app renders here -->
+    </div>
+    <div id="app4">
+      <!-- my app renders here -->
+    </div>
+    <div id="app5">
+      <!-- my app renders here -->
+    </div>
     <script src="react/react.js"></script>
     <script src="react/react-dom.js"></script>
     <script src="react/babel.js"></script>
+
+
+
     <script type="text/babel">
       class MyComponent extends React.Component {
         render() {
@@ -25,6 +40,80 @@
       ReactDOM.render(
         <MyComponent name="Bob" />,
         document.getElementById('app'),
+      );
+    </script>
+
+
+
+
+
+     <script type="text/babel">
+        const MyComponent2 = function (props) {
+          return (
+            <span>
+              My name is <em>{props.name}</em>
+            </span>
+          );
+        };
+  
+        ReactDOM.render(
+          <MyComponent2 name="Bob2" />,
+          document.getElementById('app2'),
+        );
+      </script>
+
+
+
+
+
+      <script type="text/babel">
+        const MyComponent3 = function ({name}) {
+          return (
+            <span>
+              My name is <em>{name}</em>
+            </span>
+          );
+        };
+        ReactDOM.render(
+          <MyComponent3 name="Bob3" />,
+          document.getElementById('app3'),
+        );
+      </script>
+
+
+
+
+      <script type="text/babel">
+        const MyComponent4 = function ({name, job}) {
+          return (
+            <span>
+              My name is <em>{name}</em>, the {job}
+            </span>
+          );
+        };
+        ReactDOM.render(
+          <MyComponent4 name="Bob" job="engineer" />,
+          document.getElementById('app4'),
+        );
+      </script>
+
+
+
+
+    <script type="text/babel">
+      const MyComponent5 = function ({name, job}) {
+        return (
+          <span>
+            My name is <em>{name}</em>, the {job}
+          </span>
+        );
+      };
+      MyComponent5.defaultProps = {
+        job: 'engineer',
+      };
+      ReactDOM.render(
+        <MyComponent5 name="Bob" />,
+        document.getElementById('app5'),
       );
     </script>
   </body>
